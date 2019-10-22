@@ -1,0 +1,15 @@
+Satisfy Any
+Order allow,deny
+Allow from all
+Deny from none
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.chuff-chuff\.dev$
+RewriteRule ^(.*)$ https://chuff-chuff.dev/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://%{HTTP_HOST}/$1 [R=301,L]
