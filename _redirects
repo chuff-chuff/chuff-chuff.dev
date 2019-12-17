@@ -1,4 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://chuff-chuff-dev.netlify.com/* https://chuff-chuff.dev/:splat 301!
-
-https://chuff-chuff.dev/index.html https://chuff-chuff.dev/ 301!
